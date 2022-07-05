@@ -1,3 +1,3 @@
 from core.main import *
 
-salute()
+init_app(OPTIONS)
