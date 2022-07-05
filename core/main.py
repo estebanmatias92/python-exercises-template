@@ -1,8 +1,17 @@
 from .menu.menu import *
 import os
 
+# Path to exercises directory
+EXERCISES_DIR = str(os.path.dirname(os.path.abspath(__file__))) + "/exercises"
+
+#
+#   Get all the exercises files as a list
+#
+def get_exercises_list():
+    return os.listdir(EXERCISES_DIR)
+
 # List of options
-OPTIONS = range(1, 11)
+OPTIONS = range(1, len(get_exercises_list()) + 1)
 
 #
 #   Main loop for menu

@@ -1,2 +1,2 @@
-def launch():
-    print("Este es el ejercicio 8 !!!")
+
+print("Este es el ejercicio 8 !!!")

@@ -1,8 +1,4 @@
-import os
-
-# from os import listdir
-# from os.path import isfile, join
-# onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+from pathlib import Path
 
 #
 #   Show exercises list
@@ -25,17 +21,10 @@ def select_option():
 
 
 #
-#   Call the exercise module
+#   Call the exercise file
 #
 def launch_exercise(option):
-    name = "ejercicio_" + str(option)
-    # exercise = getattr(exercises, "ejercicio_%i.py" % option)
-    # exercise.launch()
-    # ejercicio_1.launch()
-    module_list = [
-        str(elem).replace(".py", "") for elem in os.listdir("./core/exercises")
-    ]
-    # module_list[].launch()
-
-    # print(dir(exercises.__name__))
-    exec(module_list[0]).launch()
+    abs_path = Path(__file__)
+    parent_dir = abs_path.parent.parent.absolute()
+    exercise_file = str(parent_dir) + "/exercises/ejercicio_" + str(option) + ".py"
+    exec(open(exercise_file).read())
