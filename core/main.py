@@ -10,6 +10,7 @@ EXERCISES_DIR = str(os.path.dirname(os.path.abspath(__file__))) + "/exercises"
 def get_exercises_list():
     return os.listdir(EXERCISES_DIR)
 
+
 # List of options
 OPTIONS = range(1, len(get_exercises_list()) + 1)
 
@@ -19,6 +20,9 @@ OPTIONS = range(1, len(get_exercises_list()) + 1)
 def init_app(options):
     # Emulate a do-while loop, this always is going to execute at least one time
     while True:
+        # Clear console
+        os.system("clear")
+
         # Show all the exercise options
         print_options(options)
 
