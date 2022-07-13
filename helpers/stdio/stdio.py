@@ -23,7 +23,7 @@ def int_input(phrase):
 def string_input(phrase):
     value = input(phrase)
 
-    if not value.alpha() or not value.alnum():
+    if not value.isalpha() and not value.isalnum():
         print("The value is not string")
         exit()
 
