@@ -31,6 +31,6 @@ def launch_exercise(option):
 
     # Print aesthetics and exec the file
     print("")
-    exec(open(exercise_file).read())
+    exec(open(exercise_file).read(), {})
     print("\n")
     input("Press Enter to return to the menu...")
