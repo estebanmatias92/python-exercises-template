@@ -1,12 +1,9 @@
 {
     "recommendations": [
-        "visualstudioexptteam.vscodeintellicode",
+        "donjayamanne.python-extension-pack",
         "visualstudioexptteam.intellicode-api-usage-examples",
-        "ms-python.python",
-        "ms-python.vscode-pylance",
         "ms-python.black-formatter",
-        "KevinRose.vsc-python-indent",
-        "njpwerner.autodocstring",
-        "sourcery.sourcery"
+        "sourcery.sourcery",
+        "almenon.arepl"
     ]
 }
