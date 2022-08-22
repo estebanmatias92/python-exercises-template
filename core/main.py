@@ -1,4 +1,4 @@
-from .menu.menu import *
+from core.menu.menu import *
 import os
 
 # Path to exercises directory

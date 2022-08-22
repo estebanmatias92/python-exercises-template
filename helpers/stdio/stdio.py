@@ -1,3 +1,5 @@
+import re
+
 #
 # Receive an string as parameter for the input.
 #
@@ -6,28 +8,13 @@
 #
 def int_input(phrase):
     value = input(phrase)
+    regex = "[-+]?\d+$"  # Expression to match integers
+    match = re.match(regex, value)
 
-    try:
-        return int(value)
-    except ValueError:
-        print("The value is not an integer")
-        exit()
+    if match is None:
+        raise ValueError("The value is not numeric only.")
 
-
-#
-# Receive an string as parameter for the input.
-#
-# Exit the program with an error message if the returned value from the input is numeric or decimal.
-# Returns value if value was not numeric.
-#
-def string_input(phrase):
-    value = input(phrase)
-
-    if not value.isalpha() and not value.isalnum():
-        print("The value is not string")
-        exit()
-
-    return value
+    return int(value)
 
 
 #
@@ -38,9 +25,10 @@ def string_input(phrase):
 #
 def float_input(phrase):
     value = input(phrase)
+    regex = "^[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)$"  # Expression to match floats
+    match = re.match(regex, value)
 
-    try:
-        return float(value)
-    except ValueError:
-        print("The value is not a floating point")
-        exit()
+    if match is None:
+        raise ValueError("The value is not a floating point")
+
+    return float(value)
