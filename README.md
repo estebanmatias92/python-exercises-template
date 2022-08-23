@@ -26,7 +26,7 @@ Proceed to install the first dependencies
 
 You can save time and effort and use Make to create the project and install the dependencies, and activate the environment immediately afterwards
 
-*`make && . venv/bin/activate`*
+*`make build && . venv/bin/activate`*
 
 To run the app, use Make Run
 
